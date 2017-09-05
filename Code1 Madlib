@@ -1,0 +1,71 @@
+//Come get some Verb steals at WALMART, where you`ll receive adjective dumbass 99.9% discounts on all of your favorite brand name bullshit!
+//Our adjective lazy and verb regretful associates are there to verb  you number 25 hours a day.
+//Here you will find ungodly prices on the noun (plural) nonsense you might need
+//5.99$ lingere noun(plural) for the moms, 5$ Muzzle's noun(plural) for the kids and all the latest electronics for the 1000 nerds you know!.
+//So come on down to your disgusting adjective-- evil adjective  WALMART where the nouns profit come first. 
+ String
+  verb1=" Steals",
+  verb2=" regretful",
+  verb3=" damn",
+  verb4=" bullshit",
+  adjective1=" Dumbass ",
+  adjective2=" lazy",
+  adjective3=" ungodly",
+  adjective4=" undermine",
+  adjective5=" disgusting",
+  adjective6=" evil",
+  noun1=" nonsense",
+  noun2=" lingere ",
+  noun3=" Muzzles ",
+  noun4=" nerds",
+  noun5=" profit";
+  
+  
+  int
+   number2= 25,
+   number5= 1000,
+   number6= 1000000;
+  
+  float
+  number1=99.9,
+  number3=5.99,
+  number4=7.50;
+ 
+println (
+ "come get some" 
+ + verb1
+ + " at walmart where you'll receive"
+ + adjective1
+ + number1
+ + " discounts on all of your favorite brand name"
+ +verb4
+ +" our"
+ +adjective2
+ +" and"
+ + verb2
+ + " associates are there to"
+ +adjective4
+ +" you "
+ +number2
+ +" hours a day"
+ +" Here you will find"
+ +adjective3
+ +" prices on the"
+ +noun1
+ +" you might need "
+ +number3
+ +noun2
+ +" for the moms "
+ +number1
+ +"  for the kids and all the latest electronics for the "
+ +number6
+ +" nerds you know!"
+ +" So come on down to your"
+ +adjective5
+ +adjective6
+ +" WALMART where the"
+ +noun5
+ +" comes first."
+ 
+ );
+ 
