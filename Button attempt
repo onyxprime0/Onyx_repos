@@ -1,0 +1,60 @@
+boolean showImage = true;
+PImage img;
+PImage img1;
+
+void setup() {
+     
+  img = loadImage("earlyswitch.png");
+  img1 = loadImage("thingsIloose.png");
+  
+  fullScreen();
+}
+
+void mousePressed() {
+  
+   if (mouseX < 100 && mouseY < 100) {
+    //button 1 was just clicked, show button 2 instead
+    showImage = false;
+  } else if (mouseX > 100 && mouseY > 100) {
+    //button 2 was just clicked, show button 1 instead
+    showImage = true;
+  }
+}
+
+void draw() {
+
+  background(0);
+ 
+ //image(img, 0, 0);
+  //image(img1, 0, 0);
+     
+     if (mouseX > width-50 && mouseX < width && mouseY > height-50 && mouseY < height){
+    
+        img = loadImage("earlyswitch.png");
+        image(img, 0, 0, width, height);
+    }
+   
+   if (mouseX > width-50 && mouseX < width && mouseY > height-50 && mouseY < height){
+   
+      img = loadImage("thingsIloose");
+        image(img, 0, 0, width, height);
+    }
+   
+   
+   
+   if (showImage) { //load first meme
+     img = loadImage("earlyswitch.png");
+        image(img, 0, 0, width, height);
+    }
+    else { //load second meme
+    img = loadImage("thingsIloose");
+        image(img, 0, 0, width, height);
+    }
+   
+   
+  }
+
+// fill(255, 0, 0);
+   // rect(0, 0, 100, 100);
+   // fill(0, 255, 0);
+    //rect(100, 100, 100, 100);
