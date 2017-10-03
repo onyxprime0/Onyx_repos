@@ -378,7 +378,7 @@ void mouseReleased() {
   if(!attacking) {
     float a = atan2(mouseY - board.player().y, mouseX - board.player().x);
     attacking = true;
-    attack = new Attack(10 + round, board.player().x, board.player().y, a, 5, 5, random(0, 255));
+    attack = new Attack(70 + round, board.player().x, board.player().y, a, 5, 5, random(0, 255));
   }
 }
 
