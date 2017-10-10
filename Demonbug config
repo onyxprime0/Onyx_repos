@@ -1,0 +1,10 @@
+Demonbug myDemonbug = new Demonbug();
+
+void setup() {
+  size(700, 700);
+}
+
+void draw() {
+  myDemonbug.display();
+  myDemonbug.move();
+}
