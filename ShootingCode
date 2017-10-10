@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class shootingBullets : MonoBehaviour {
+    public float speed = 10f;
+    public float bulletForce = 10000f;
+    private Rigidbody2D rb;
+    public float xSpeed;
+    public float ySpeed;
+    public GameObject bulletPrefab;
+    public Transform spawnpoint;
+	public int life = 40;
+    public float bulletsPerSecond = 0.5f;
+    public bool canShoot = true;
+	public GameObject announcer;
+	public GameObject healthCount;
+
+
+
+	// Use this for initialization
+	void Start () {
+        rb = GetComponent<Rigidbody2D>();
+        InvokeRepeating("Shoot", 0.0f, 1.0f / bulletsPerSecond);
+    }
+
+	void Shoot()
+    {
+        canShoot = true;
+    }
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.CompareTag ("Meteor")) {
+			life--;
+			healthCount.GetComponent<TextMesh>().text = ""+ life;
+
+			if (life < 20) {
+				announcer.SetActive (true);
+
+			}
+
+			if (life < 1) {
+				SceneManager.LoadScene ("endGame");
+			}
+
+		}
+	
+
+
+	}
+	// Update is called once per frame
+	void Update () {
+
+        if ((Input.GetButton("Jump") && (canShoot)))
+        {
+            GameObject newBullet = Instantiate(bulletPrefab, spawnpoint.position, Quaternion.identity) as GameObject;
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, bulletForce));
+            canShoot = false;
+        }
+
+
+
+
+
+
+        xSpeed = Input.GetAxisRaw("Horizontal") * speed;
+        ySpeed = Input.GetAxisRaw("Vertical") * speed;
+        rb.velocity = new Vector2(xSpeed, ySpeed);
+
+
+	}
+}
