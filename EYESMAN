@@ -1,0 +1,112 @@
+import processing.pdf.*;
+
+Eye e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18;
+
+void setup() {
+  size(800, 800, PDF, "EYESMAN.pdf");
+  frameRate(199);
+  noStroke();
+  e1 = new Eye (250,400,120);
+  e2 = new Eye (164,300,80);  
+  e3 = new Eye (400,400,220);
+  e4 = new Eye (200,25,75);
+  e5 = new Eye (420,700,50);
+  e6 = new Eye (150,500,120);
+  e7 = new Eye (300,25,110);
+  e8 = new Eye (420,75,120);
+  e9 = new Eye (500, 75,250);
+  e10 = new Eye (50,120,90);
+  e11 = new Eye (100,700,150);
+  e12 = new Eye (60,700,120);
+  e13 = new Eye (200,2,100);
+  e14 = new Eye (500,700,130);
+  e15 = new Eye (650,200,125);
+  e16 = new Eye (800,500,75);
+  e17 = new Eye (585,255,82);
+  e18 = new Eye (700,400,90);
+}
+
+void draw() {
+  background(0);
+  
+  e1.update(mouseX, mouseY);
+  e2.update(mouseX, mouseY);
+  e3.update(mouseX, mouseY);
+  e4.update(mouseX, mouseY);
+  e5.update(mouseX, mouseY);
+  e6.update(mouseX, mouseY);
+  e7.update(mouseX, mouseY);
+  e8.update(mouseX, mouseY);
+  e10.update(mouseX, mouseY);
+  e11.update(mouseX, mouseY);
+  e12.update(mouseX, mouseY);
+ e13.update(mouseX, mouseY);
+  e14.update(mouseX, mouseY);
+  e15.update(mouseX, mouseY);
+  e16.update(mouseX, mouseY);
+  e17.update(mouseX, mouseY);
+  e18.update(mouseX, mouseY);
+
+float m = 1000;
+ 
+  stroke(m);
+  
+while(m>0){
+ stroke(50);
+ fill(m);
+  ellipse(400,400,m,m);
+  m  = m - random(200);//loop until while is false
+
+  e1.display();
+  e2.display();
+  e3.display();
+  e4.display();
+  e5.display();
+  e6.display();
+  e7.display();
+  e8.display();
+  e10.display();
+  e11.display();
+  e12.display();
+  e13.display();
+  e14.display();
+  e15.display();
+  e16.display();
+ e17.display();
+  e18.display();
+   
+   if (frameCount < 200) {
+    //only draw 200 times. You cannot just press the stop button
+    //you can't see what's happening on screen, so you'll have to figure out when to exit 
+  } else {
+    exit(); //this will close the program
+  }
+}
+}
+
+class Eye {
+  int x, y;
+  int size;
+  float angle = 0.0;
+  
+  Eye(int tx, int ty, int ts) {
+    x = tx;
+    y = ty;
+    size = ts;
+ }
+
+  void update(int mx, int my) {
+    angle = atan2(my-y, mx-x);
+  }
+  
+  void display() {
+    pushMatrix();
+    translate(x, y);
+    fill(255);
+    ellipse(0, 0, size, size);
+    rotate(angle);
+    fill(139, 0, 0);
+    ellipse(size/4, 0, size/2, size/2);
+    popMatrix();
+  }
+}
