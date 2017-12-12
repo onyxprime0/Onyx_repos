@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phsyicss tests", "Assembly-CSharp.csproj", "{F236489C-81F4-ED67-4826-CF888DFF6807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "phsyicss tests", "Assembly-CSharp-Editor.csproj", "{BA3D7DD2-0F07-B3F2-6F4B-604122CE6D05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F236489C-81F4-ED67-4826-CF888DFF6807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F236489C-81F4-ED67-4826-CF888DFF6807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F236489C-81F4-ED67-4826-CF888DFF6807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F236489C-81F4-ED67-4826-CF888DFF6807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3D7DD2-0F07-B3F2-6F4B-604122CE6D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3D7DD2-0F07-B3F2-6F4B-604122CE6D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3D7DD2-0F07-B3F2-6F4B-604122CE6D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3D7DD2-0F07-B3F2-6F4B-604122CE6D05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
